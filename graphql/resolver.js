@@ -39,9 +39,9 @@ const resolvers = {
         }
       });
     },
-    deleteUser: async (_, { email, pw }) => {
+    deleteUser: async (_, { email, id }) => {
       return User.destroy({
-        where: { email, pw }
+        where: { email, id }
       })
         .then(data => {
           if (data > 0) {

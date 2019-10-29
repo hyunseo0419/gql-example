@@ -4,7 +4,7 @@ type Query {
 
 type Mutation {
   createUser(email: String!, pw: String!, name: String!, th: Int!): User!
-  deleteUser(email: String!, pw: String!): deleteComplete
+  deleteUser(email: String!, id: Int!): deleteComplete
 }
 
 type User {
