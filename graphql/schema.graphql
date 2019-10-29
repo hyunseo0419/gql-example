@@ -1,0 +1,27 @@
+type Query {
+  getUser(email: String!, pw: String!): UserData
+}
+
+type Mutation {
+  createUser(email: String!, pw: String!, name: String!, th: Int!): User!
+  deleteUser(email: String!, pw: String!): deleteComplete
+}
+
+type User {
+  email: String!
+  pw: String!
+  name: String!
+  th: Int!
+}
+# 회원가입 schema
+
+type UserData {
+  isLogin: Boolean
+  user: User
+  err: String
+}
+# 로그인 schema
+
+type deleteComplete {
+  success: Boolean!
+}
